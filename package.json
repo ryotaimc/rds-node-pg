@@ -36,7 +36,7 @@
     "node-postgres"
   ],
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "repository": "github:ryotaimc/rds-node-pg",
   "scripts": {
     "build": "npm-run-all clean tsc",
