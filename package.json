@@ -1,7 +1,7 @@
 {
   "name": "rds-node-pg",
   "description": "A wrapper utility tool to use node-postgres against RDS or other managed database service.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ryota Ohnishi",
   "dependencies": {
     "@aws-sdk/client-rds": "^3.406.0",
