@@ -118,14 +118,19 @@ export class RdsPGPool {
       // TODO: need to remove connect call
       await this.setup();
     }
+    let retryCounter = 0;
     // wait if the connection is not connected
     while (ConnectionStatus.get() !== "SETUP_FINISHED") {
+      if (retryCounter > 10) {
+        throw `ConnectionStatus not changed within 10 retries`;
+      }
       await new Promise((resolve) => {
         console.log(
-          `waiting for db Connection. Current status ${ConnectionStatus.get()}`,
+          `waiting for db Connection. Current status ${ConnectionStatus.get()}. RetryCount: ${retryCounter}`,
         );
         setTimeout(resolve, 500);
       });
+      retryCounter += 1;
     }
     // if pool is still null then throw error
     if (this.pgPool === null) {
