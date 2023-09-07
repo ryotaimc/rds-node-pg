@@ -1,14 +1,14 @@
 # rds-node-pg
 
-A wrapper utility tool to use node-postgres against RDS which secret is managed by SecretsManager.
+A wrapper utility tool to use node-postgres against RDS Cluster whose secret is managed by SecretsManager.
 
 ## Key feature
 
-Run database connection update upon the automatic secret rotation happening on RDS side.
+Run database connection update upon the automatic secret rotation happening on the RDS side.
 
 ## Required Permission
 
-When this module is used on the AWS ECS, the permission for the commands listed below are required.
+When this module is used on the AWS ECS, permission for the below commands is required.
 
 - DescribeDBClustersCommand for rds-cluster
 - GetSecretValueCommand for rds-cluster-secret
