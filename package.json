@@ -12,6 +12,7 @@
     "build": "npm-run-all clean tsc",
     "lint": "eslint . --ext .ts",
     "jest": "jest --runInBand",
+    "tsc": "tsc",
     "db:up": "docker-compose -f \"./tests/database/docker-compose.yml\" up -d",
     "db:down": "docker-compose -f \"./tests/database/docker-compose.yml\" down --volumes"
   },

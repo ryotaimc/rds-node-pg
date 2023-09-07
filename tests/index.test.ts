@@ -1,5 +1,3 @@
-import {} from "../src/index";
-
 import { describe, test, expect } from "@jest/globals";
 import { RdsPGPool } from "../src/index";
 import { mockClient } from "aws-sdk-client-mock";
