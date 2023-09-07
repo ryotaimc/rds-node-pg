@@ -8,6 +8,7 @@
     "prettier"
   ],
   "rules": {
-    "semi": "error"
+    "semi": "error",
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 }
