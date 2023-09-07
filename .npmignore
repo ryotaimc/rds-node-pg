@@ -1,0 +1,9 @@
+/.vscode
+/node_modules
+/src
+/tests
+.editorconfig
+.eslintrc.json
+.prettierrc
+jest.config.cjs
+tsconfig.json
