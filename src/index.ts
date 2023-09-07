@@ -99,9 +99,8 @@ export class RdsPGPool {
         setTimeout(resolve, CONNECTION_CHECK_BACKOFF_MS);
       });
       try {
-        await this.pgPool.query(`
-        select * from pg_tables limit 1;
-        `);
+        const client = await this.pgPool.connect();
+        client.release();
         break;
       } catch (err) {
         if ((err as pg.DatabaseError).routine == "57P03") {
